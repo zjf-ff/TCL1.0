@@ -26,6 +26,7 @@
 }
 
 .purchase .purc-l{
+    border-top: 1px solid #ccc;
     width: 565px;
     min-height: 640px;
     padding: 0 70px;
@@ -35,6 +36,7 @@
 }
 
 .purchase .purc-r{
+        border-top: 1px solid #ccc;
         margin-left: 705px;
         min-height: 640px;
         /* background: #ff0; */

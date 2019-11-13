@@ -45,7 +45,7 @@
                     </li>
                         <i></i>
                     <li>
-                        <a href="##">注册</a>
+                        <a href="register.html">注册</a>
                     </li>
                         <i></i>
                     <li>
@@ -64,7 +64,7 @@
                  <div class="nav-center" id="nav-center">
                      <div class="center-left">
                         <ul class="nav-cl">
-                            <li>首页</li>
+                            <li><a href="index.html">首页</a></li>
                             <li>空调</li>
                             <li>电视</li>
                             <li>冰箱</li>
@@ -528,9 +528,6 @@
         next_text:"下一页",
         ellipse_text:"---",
         prev_show_always:false,
-        callback:function(qh){
-            console.log(qh)
-        }
     })
 
 
@@ -549,10 +546,9 @@
 
 //数据json渲染
 $.ajax({
-    url:"http://localhost/TCL/data/datails.json",
+    url:"http://localhost/TCL/data/details.json",
     dataType:"json",
-    success:function(data)
-    {
+    success:function(data){
         add(data);
     },
 })
@@ -574,7 +570,7 @@ function add(data){
                             <p><a href="${data[i].Pa}">注册成为TCL分享家，自购省钱，分享赚钱，点击查看》，详情可咨询客服，</font></a>TCL KFRd-35GW/F2AH11BPA 一级能效/唯美曲线艺术外观/wifi智能/ECO节能/大1.5P</p>
                         </div>
                         <div class="pri">${data[i].price}</div>
-                        <a href="detail.html" class="addCart"  zjf=${data[i].CommoditID}>点击详情</a>
+                        <a href="detail.html"  target='_blank' class="addCart"  zjf=${data[i].CommoditID}>点击详情</a>
                     </div>
                 </li>
             `   
