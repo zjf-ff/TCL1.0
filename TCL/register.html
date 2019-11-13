@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TCL用户中心-注册TCL账号</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .headerbox{
+            width: 1226px;
+            margin: 0 auto;
+        }
+        .headerbox .header{
+            padding: 20px 0 20px;
+            height: 45px;
+            border: none;
+            margin-left: 20px;
+        }
+        .logo{float: left;}
+        .headerbox .header span{
+            float: left;
+            font:32px/45px "";
+            color:#666;
+            margin-left: 30px;
+            font-weight: lighter;
+        }
+        .login-box{
+            position: relative;
+            height: 480px;
+            background: url(images/back.jpg)no-repeat center;
+        }
+        .login-box .main{
+            margin-top: 0;
+            width: 1226px;
+            margin: 0 auto;
+            padding: 30px 0;
+            position: relative;
+        }
+        
+        .login-box .main .login-cont{
+            width: 280px;
+            height: 378px;
+            border: 1px solid #ccc;
+            background: #ffffff;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            padding: 20px 40px;
+        }
+      
+        .login-box .main .login-cont .t-p-i{
+            display: block;
+            float: right;
+        }
+        .login-box .main .login-cont .t-p-i a{
+            margin-left: 10px;
+            width: 32px;
+            height: 32px;
+            background: url(images/t-p-i.png);
+            display: block;
+            float: left;
+        }
+        .login-box .main .login-cont .t-p-i .ico01{
+            background-position:0 -84px;
+        }
+        .login-box .main .login-cont .t-p-i .ico02{
+            background-position:0 -42px;
+        }
+        .login-box .main .login-cont .t-p-i .ico03{
+            background-position:0 0;
+        }
+        .login-box .main .login-cont .login-title{
+            display: block;
+            font-size: 18px;
+            color: #333;
+            line-height: 36px;
+        }
+        .login-box .main .login-cont .text-group{
+            margin-top: 5px;
+            padding-bottom: 15px;
+            position: relative;
+        }
+        .login-box .main .login-cont .text-group .ikyuser{
+            width: 28px;
+            height: 27px;
+            margin: 8px 0 0 8px;
+            position: absolute;
+            background: url(images/l-i.png);
+            background-position: -64px 0;
+        }
+        .login-box .main .login-cont .text-group .ikyuser2{
+            width: 28px;
+            height: 27px;
+            margin: 8px 0 0 8px;
+            position: absolute;
+            background: url(images/l-i.png);
+            background-position: 0 0;
+        }
+
+        .login-box .main .login-cont .text-group .ikyuser3{
+            width: 28px;
+            height: 27px;
+            margin: 8px 0 0 8px;
+            position: absolute;
+            background: url(images/l-i.png);
+            background-position: -128px 0;
+        }
+        .login-box .login-cont .text-group .yzm-code {
+            right: 1px;
+            top: 1px;
+            width: 85px;
+            height: 38px;
+            background: #f0f0f0;
+            border-left: 1px solid #cdd1d4;
+            text-align: center;
+            line-height: 38px;
+            color: red; 
+            cursor: pointer;
+            font-size: 12px;
+            z-index: 0;
+        }
+
+        .login-box .main .login-cont .text-group .linfo{
+            border: 1px solid #999;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-indent: 50px;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+        .login-box .main .login-cont .text-group .hint{
+            color: red;
+            font-size: 12px;
+            position: absolute;
+            bottom: 2px;
+            left: 9px;
+            display: none;
+        }
+
+        .login-box .login-cont .protacol {
+            margin: 4px 0 10px;
+            font-size: 14px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .login-box .login-cont .protocol .clause-checkbox {
+            margin-top: 4px;
+            vertical-align: top;
+        }
+        .login-box .main .login-cont .text-group .login-btn{
+            margin-top: 5px;
+        }
+        .login-box .main .login-cont .login-btn .login-b{
+            color: #ffffff;
+            width: 100%;
+            height: 40px;
+            display: block;
+            cursor: pointer;
+            border: 0;
+            font: 16px/40px "";
+            background: red;
+            text-align: center;
+            text-decoration: none;
+        }
+        .login-box .o-methds {
+            width: 350px;
+            margin-top: 4px;
+        }
+        .login-box .o-methds a {
+            font-size: 12px;
+            color: #333;
+            line-height: 20px;
+            margin-left: 28px;
+            display: inline-block;
+        }
+
+        .footerbox {
+            width: 1226px;
+            margin-top: 42px;
+            margin: 42px auto 60px;
+        }
+        .footerbox .footnav {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .footerbox .footnav a {
+            display: inline-block;
+            width: 92px;
+            text-align: center;
+            border-right: 1px solid #ccc;
+            line-height: 12px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footerbox .copyright {
+            font-size: 12px;
+            color: #999;
+            line-height: 18px;
+            text-align: center;
+            margin-top: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="headerbox">
+        <p class="header">
+            <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
+            <span>TCL账号登录</span>
+        </p>
+    </div>
+
+    <div class="login-box">
+        <div class="main">
+            <div class="login-cont">
+                
+                <p class="login-title">注册TCl账号</p>
+                <div class="text-group">
+                    <span class="ikyuser"></span>
+                    <input type="text" class="linfo j-UserName" placeholder="手机号码">
+                    <span class="hint">手机号码不能为空！</span>
+                </div>
+                <div class="text-group">
+                        <span class="ikyuser2"></span>
+                        <input type="text" class="linfo j-UserName" placeholder="图片验证码">
+                </div>
+                <div class="text-group">
+                    <span class="ikyuser3"></span>
+                    <input type="text" class="linfo j-UserName" placeholder="短信验证码">
+                    <span class="yzm-code red pa font12  J-GetPhoneCode">获取验证码</span>
+                </div>
+                <div class="protacol">
+                    <input type="checkbox" class="clause-checkbox J-Protacol" checked="checked">
+                    <span class="agree-text">已阅读并同意用户服务条款和隐私政策</span>
+                </div>
+                <p class="login-btn">
+                    <a class="login-b" href="##">
+                        注册
+                    </a>
+                </p>
+                <p class="o-methds">
+                    <a id="btn-quickLogin" href="login.html">已有账号直接登录</a>
+                    <a href="login.html">推荐第三方登录</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footerbox">
+        <p class="footnav"><a href="http://www.tcl.com/group/companyInfo/index">关于TCL</a> <a href="http://www.tcl.com/group/societyDuty/index">社会责任</a> <a href="http://www.tcl.com/group/investors/index">投资者关系</a> <a href="http://www.tcl.com/group/news/index">新闻中心</a> <a href="http://www.tcl.com/dealer/toLogin">经销商之家</a></p>
+        <p class="copyright"> ©2010-2016 TCL CORPORATION All Rights Reserved.  <a href="http://www.tcl.com:80/frontshow/content/getContent/bf9d8fe2ec834c178f7bd2ba2272adfa">使用条款</a>  TCL集团股份有限公司版权所有 粤ICP备05040863号</p>
+     </div>
+</body>
+</html>
