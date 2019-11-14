@@ -245,7 +245,8 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: bold; }
+  font-weight: bold;
+ }
 
 .shopping-car-container .goods-content .goods-item .goods-image-column span {
   width: 200px;
@@ -255,97 +256,118 @@ label {
   line-height: 25px;
   padding: 10px;
   display: block;
-  float: left; }
+  float: left;
+ }
 
 .col-md-3 {
   width: 15%;
   position: relative;
   min-height: 1px;
   padding-right: 15px;
-  padding-left: 15px; }
+  padding-left: 15px;
+ }
 
 .goods-params {
-  color: darkgray; }
+  color: darkgray;
+ }
 
 .goods-price {
   color: red;
-  font-weight: bolder; }
+  font-weight: bolder;
+ }
 
 .input-group {
   position: relative;
   border-collapse: separate;
   width: 90px;
-  height: 34px; }
+  height: 34px;
+ }
 
 .input-group-btn {
   float: left;
   position: relative;
   font-size: 0;
-  white-space: nowrap; }
+  white-space: nowrap;
+ }
 
 .single-total {
   color: red;
-  font-weight: bold; }
+  font-weight: bold;
+ }
 
 .btn-danger {
   width: 54px;
   height: 34px;
   color: #fff;
   background-color: #d9534f;
-  border-color: #d43f3a; }
+  border-color: #d43f3a;
+ }
+
 
 .shopping-car-container .panel-default {
-  position: relative; }
+  position: relative;
+ }
 
 .jiesuan {
   width: 1323px;
   height: 57px;
   border-color: #ddd;
-  background: #e5e5e5; }
+  background: #e5e5e5;
+ }
 
 .bottom-menu-include {
   width: 1323px;
   height: 27px;
-  background: #e5e5e5; }
+  background: #e5e5e5; 
+}
 
 .bottom-menu {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center; 
+}
 
 label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: bold; }
+  font-weight: bold;
+ }
 
 .bottom-menu #checkAllBottom {
-  vertical-align: text-bottom; }
+  vertical-align: text-bottom;
+ }
 
 #deleteMulty {
   color: cornflowerblue;
   cursor: pointer;
-  vertical-align: text-bottom; }
+  vertical-align: text-bottom;
+ }
 
 #selectGoodsCount {
   color: orangered;
   font-size: 16px;
-  font-weight: bolder; }
+  font-weight: bolder;
+ }
 
 #selectGoodsMoney {
   color: orangered;
   font-size: 16px;
-  font-weight: bolder; }
+  font-weight: bolder;
+ }
 
 .submitDis {
   margin-left: 800px;
   top: -15px;
   width: 70px;
   height: 57px;
-  background: #f12020; }
+  background: #f12020;
+ }
 
 .order-content {
-  width: 100%; }
+  width: 100%;
+ }
+
 
 
 
