@@ -7,7 +7,7 @@
     <title>TCL商品详情页</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/detail.css">
-    <link rel="stylesheet" href="public css/css/public.css">
+    <link rel="stylesheet" href="css/public.css">
 </head>
 <body>
     <header>
@@ -209,7 +209,9 @@
 <script src="js/jquery.js"></script>
 <script>
 $.ajax({
-    url:"http://localhost/TCL/data/detail.json",
+    url:"http://127.0.0.1:81/data/detail.json",
+
+    
     dataType:"json",
     success:function(data){
         add(data);
@@ -295,8 +297,8 @@ function add(data){
         <div class="purc-text groupedProduct" id="groupedProduct">
             <div class="sele">六六顺系列</div>
             <div class="options">
-                <span class="groupedproduct" title="${data[i].groupedproduct}" data-uuid="675e7bad0c584091a6f8cd184ecf9a4c">${data[i].groupedproduct}</span>
-                <span class="groupedproduct active" title="${data[i].groupedproduct2}" data-uuid="06be865a9beb448daf2728be5cfc83db">${data[i].groupedproduct2}</span>                
+                <span class="groupedproduct" title="${data[j].groupedproduct}" data-uuid="675e7bad0c584091a6f8cd184ecf9a4c">${data[i].groupedproduct}</span>
+                <span class="groupedproduct active" title="${data[j].groupedproduct2}" data-uuid="06be865a9beb448daf2728be5cfc83db">${data[i].groupedproduct2}</span>                
             </div>
         </div>
         <div class="purc-text">     

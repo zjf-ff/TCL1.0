@@ -53,7 +53,7 @@ header .nav .search .text{float:right; width: 233px;height: 34px;font-size:14px;
 .three img{width: 400;height: 220px;}
 
 main .title .margin{width: 1228px;height: 28.8px; margin: 0 auto;margin-bottom: 24px;}
-main .title .margin h2{height: 28.8px;float: left;font: 22px/28.8px "";border-left: 4px solid #fe0000;padding-left: 15px;margin-right: 36px;color: #666666;}
+main .title .margin h2{height: 28.8px;font: 22px/28.8px "";border-left: 4px solid #fe0000;padding-left: 15px;margin-right: 36px;color: #666666;}
 main .title .margin span{float: left; font: 16px/28.8px ""; vertical-align: middle;color: #555555;}
 main .title .margin span:hover{color: red;cursor: pointer;}
 main .title .margin a{float: right; display: inline-block;font: 12px/28.8px "";color: red;}

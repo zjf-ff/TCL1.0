@@ -226,17 +226,14 @@
                 <p class="login-title">注册TCl账号</p>
                 <div class="text-group">
                     <span class="ikyuser"></span>
-                    <input type="text" class="linfo j-UserName" placeholder="手机号码">
+                    <input type="text" class="linfo j-UserName" id="user" placeholder="用户名">
                     <span class="hint">手机号码不能为空！</span>
                 </div>
-                <div class="text-group">
-                        <span class="ikyuser2"></span>
-                        <input type="text" class="linfo j-UserName" placeholder="图片验证码">
-                </div>
+              
                 <div class="text-group">
                     <span class="ikyuser3"></span>
-                    <input type="text" class="linfo j-UserName" placeholder="短信验证码">
-                    <span class="yzm-code red pa font12  J-GetPhoneCode">获取验证码</span>
+                    <input type="text" class="linfo j-UserName" id="pass" placeholder="密码">
+                    <!-- <span class="yzm-code red pa font12  J-GetPhoneCode">获取验证码</span> -->
                 </div>
                 <div class="protacol">
                     <input type="checkbox" class="clause-checkbox J-Protacol" checked="checked">
@@ -244,7 +241,7 @@
                 </div>
                 <p class="login-btn">
                     <a class="login-b" href="##">
-                        注册
+                        <input type="button" id="btn" style="background: red;border: none;"  value="注册">
                     </a>
                 </p>
                 <p class="o-methds">
@@ -259,4 +256,28 @@
         <p class="copyright"> ©2010-2016 TCL CORPORATION All Rights Reserved.  <a href="http://www.tcl.com:80/frontshow/content/getContent/bf9d8fe2ec834c178f7bd2ba2272adfa">使用条款</a>  TCL集团股份有限公司版权所有 粤ICP备05040863号</p>
      </div>
 </body>
+<script src="js/jquery.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+    var ouser = document.getElementById("user")
+    var opass = document.getElementById("pass")
+    var obtn = document.getElementById("btn")
+
+    obtn.onclick = function(){
+        ajaxGet("http://127.0.0.1:81/ajax",function(res){
+            res = JSON.parse(res);
+            console.log(res)
+            if(res.code == 1){
+                console.log("重名")
+            }else if(res.code == 2){
+                location.pathname = "/login.html";
+            }
+        }
+        ,{
+            type:"register",
+            user:ouser.value,
+            pass:opass.value
+        })
+    }
+</script>
 </html>

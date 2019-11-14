@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TCL官网-TCL官方商城_TCL电视</title>
     <link rel="stylesheet" href="css/details.css">
-    <link rel="stylesheet" href="public css/css/public.css">
+    <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/pagination.css">
 </head>
 <body>
@@ -546,7 +546,7 @@
 
 //数据json渲染
 $.ajax({
-    url:"http://localhost/TCL/data/details.json",
+    url:"http://127.0.0.1:81/data/details.json",
     dataType:"json",
     success:function(data){
         add(data);

@@ -211,17 +211,17 @@
                 <p class="login-title">账号密码登录</p>
                 <div class="text-group">
                     <span class="ikyuser"></span>
-                    <input type="text" class="linfo j-UserName" placeholder="手机号 / 邮箱 / 用户名">
+                    <input type="text" class="linfo j-UserName" id="user"  placeholder="手机号 / 邮箱 / 用户名">
                     <span class="hint">请输入合法的手机号码 / 邮箱 / 用户名！</span>
                 </div>
                 <div class="text-group">
                         <span class="ikyuser2"></span>
-                        <input type="password" class="linfo j-UserName" placeholder="登录密码">
+                        <input type="text" class="linfo j-UserName" id="pass" placeholder="登录密码">
                         <span class="hint">请输入登录密码！</span>
                 </div>
                 <p class="login-btn">
                     <a class="login-b" href="##">
-                        登录
+                        <input type="button" id="btn" style="background: red;border: none;" value="登录">  
                     </a>
                 </p>
                 <p class="o-methds">
@@ -238,4 +238,26 @@
         <p class="copyright"> ©2010-2016 TCL CORPORATION All Rights Reserved.  <a href="http://www.tcl.com:80/frontshow/content/getContent/bf9d8fe2ec834c178f7bd2ba2272adfa">使用条款</a>  TCL集团股份有限公司版权所有 粤ICP备05040863号</p>
      </div>
 </body>
+<script src="js/jquery.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+    var ouser = document.getElementById("user")
+    var opass = document.getElementById("pass")
+    var obtn = document.getElementById("btn")
+
+    obtn.onclick = function(){
+        ajaxPost("http://127.0.0.1:81/ajax",function(res){
+            res = JSON.parse(res);
+            console.log(res)
+            if(res.code == 1){
+                location.pathname="/index.html";
+            }
+            
+        },{
+            type:"login",
+            user:ouser.value,
+            pass:opass.value
+        })
+    }
+</script>
 </html>
