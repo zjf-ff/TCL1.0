@@ -265,9 +265,7 @@ label {
 .btn-danger {
   width: 54px;
   height: 34px;
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a; }
+  color: #000; }
 
 .shopping-car-container .panel-default {
   position: relative; }
@@ -314,10 +312,22 @@ label {
 
 .submitDis {
   margin-left: 800px;
-  top: -15px;
+  top: -35px;
   width: 70px;
   height: 57px;
   background: #f12020; }
 
 .order-content {
   width: 100%; }
+
+.goods-count {
+  text-align: center; }
+
+.goods-count .form-control {
+  width: 20px;
+  position: absolute;
+  left: 19px; }
+
+.btn-default2 {
+  position: absolute;
+  left: 45px; }
