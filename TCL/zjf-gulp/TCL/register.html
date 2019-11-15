@@ -241,7 +241,7 @@
                 </div>
                 <p class="login-btn">
                     <a class="login-b" href="##">
-                        <input type="button" id="btn" style="background: red;border: none;"  value="注册">
+                        <input type="button" id="btn" style="background: red;border: none;width: 100%;height: 100%;"  value="注册">
                     </a>
                 </p>
                 <p class="o-methds">
@@ -264,11 +264,18 @@
     var obtn = document.getElementById("btn")
 
     obtn.onclick = function(){
+        var username = ouser.value;
+        console.log(username);
+        var reg = /^[a-z0-9]{8,12}$/;
+        if(reg.test(username)==false){
+            alert('用户名不合法')
+            return false;
+        }
         ajaxGet("http://127.0.0.1:81/ajax",function(res){
-            res = JSON.parse(res);
+            res = JSON.parse(res);  
             console.log(res)
             if(res.code == 1){
-                console.log("重名")
+                alert("重名")
             }else if(res.code == 2){
                 location.pathname = "/login.html";
             }
@@ -279,24 +286,5 @@
             pass:opass.value
         })
     }
-
-function $(elementId){
-  return document.getElementById(elementId).value;
-}
-function divId(elementId){
-  return document.getElementById(elementId);
-    }
-
-function checkUser(){
-    // var user=$("user");
-    var userId=divId("user");
-    userId.innerHTML="";    
-    var reg=/^[a-zA-Z][a-zA-Z0-9]{3,15}$/;    
-    if(reg.test(user)==false){
-       userId.innerHTML="用户名不正确";
-    return false;
-      }
-      return true;
-}
 </script>
 </html>

@@ -249,6 +249,8 @@
         ajaxPost("http://127.0.0.1:81/ajax",function(res){
             res = JSON.parse(res);
             console.log(res)
+            alert(res.tit);
+            
             if(res.code == 1){
                 location.pathname="/index.html";
             }

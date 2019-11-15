@@ -546,7 +546,7 @@
 
 //数据json渲染
 $.ajax({
-    url:"http://127.0.0.1:81/data/details.json",
+    url:"http://127.0.0.1:81/zjf-gulp/TCL/data/details.json",
     dataType:"json",
     success:function(data){
         add(data);
@@ -570,7 +570,7 @@ function add(data){
                             <p><a href="${data[i].Pa}">注册成为TCL分享家，自购省钱，分享赚钱，点击查看》，详情可咨询客服，</font></a>TCL KFRd-35GW/F2AH11BPA 一级能效/唯美曲线艺术外观/wifi智能/ECO节能/大1.5P</p>
                         </div>
                         <div class="pri">${data[i].price}</div>
-                        <a href="detail.html"  target='_blank' class="addCart"  zjf=${data[i].CommoditID}>点击详情</a>
+                        <a href="detail.html" class="addCart"  zjf=${data[i].CommoditID}>点击详情</a>
                     </div>
                 </li>
             `   
