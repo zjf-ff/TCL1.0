@@ -219,10 +219,10 @@
                         <input type="text" class="linfo j-UserName" id="pass" placeholder="登录密码">
                         <span class="hint">请输入登录密码！</span>
                 </div>
-                <p class="login-btn">
+                <p class="login-btn">   
                     <a class="login-b" href="##">
-                        <input type="button" id="btn" style="background: red;border: none;" value="登录">  
-                    </a>
+                        <input type="button" id="btn" style="background: blue;border: none;width: 100%;height:104%;" value="登录">  
+                    </a> 
                 </p>
                 <p class="o-methds">
                     <a id="btn-quickLogin" href="#">短信验证登录</a>
@@ -249,8 +249,7 @@
         ajaxPost("http://127.0.0.1:81/ajax",function(res){
             res = JSON.parse(res);
             console.log(res)
-            alert(res.tit);
-            
+            alert(res.tit);    
             if(res.code == 1){
                 location.pathname="/index.html";
             }
